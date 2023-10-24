@@ -1,0 +1,88 @@
+
+
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #333;
+    color: white;
+}
+
+.title-box, .image-box, .section-box {
+    border: 4px solid whitesmoke; /* Increased border thickness */
+    padding: 40px;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #444;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 128, 128, 0.2)
+}
+
+.title {
+    text-align: center;
+    color: gold;
+}
+
+h2 {
+    color: gold; /* Set h2 titles color to gold */
+}
+
+.icon-large {
+    font-size: 4em;
+    color: white; /* Set icon color to white */
+    transition: transform 0.5s; /* Add a transition effect for smooth movement */
+}
+
+.icon-large:hover {
+    transform: translateX(8px); /* Move the element 10 pixels to the right on hover */
+    background-color: gold;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.rounded-image {
+    border-radius: 10%; /* Makes the image circular */
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Adjust the color as needed */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s; /* Add smooth transition on hover */
+}
+
+.button-link:hover {
+    background-color: #0056b3; /* Change color on hover */
+}
+
+.icon-box {
+    background-color: #fff; /* Set the background color to white */
+    padding: 5px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add rounded corners */
+    margin-right: 10px; /* Add some space between the icon and text */
+}
+
+
+
+
+.container {
+    width: 700px;
+    margin: 24px auto;
+}
+
+@media (max-width: 960px){
+    .container {
+        width: 500px;
+    }
+}
+
+@media (max-width: 540px){
+    .container {
+        width: 400px;
+    }
+}
