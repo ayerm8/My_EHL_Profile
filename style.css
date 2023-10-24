@@ -1,5 +1,6 @@
 
 
+/* I start my CSS project by defining my body*/
 body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -7,8 +8,10 @@ body {
     color: white;
 }
 
+
+/* The following code regroups all my boxes so that they all look the same*/
 .title-box, .image-box, .section-box {
-    border: 4px solid whitesmoke; /* Increased border thickness */
+    border: 4px solid whitesmoke; /* This line helps me to get thicker border */
     padding: 40px;
     width: 80%;
     margin: 20px auto;
@@ -17,34 +20,35 @@ body {
     box-shadow: 0px 10px 30px rgba(0, 128, 128, 0.2)
 }
 
+/* This line is giving the colour and is centering my title*/
 .title {
-    text-align: center;
+    text-align: center; 
     color: gold;
 }
 
 h2 {
-    color: gold; /* Set h2 titles color to gold */
+    color: gold; /* Here I set h2 titles color to gold */
 }
 
 .icon-large {
     font-size: 4em;
-    color: white; /* Set icon color to white */
+    color: white; /* I set icon color to white */
     transition: transform 0.5s; /* Add a transition effect for smooth movement */
 }
 
 .icon-large:hover {
-    transform: translateX(8px); /* Move the element 10 pixels to the right on hover */
+    transform: translateX(8px); /* Move the element 8 pixels to the right on hover */
     background-color: gold;
 }
 
+/* This code allows me to choose how i want to display my icons */
 .social-icons li {
     display: inline-block;
     margin-right: 5px;
+    text-align: center;
 }
 
-.rounded-image {
-    border-radius: 10%; /* Makes the image circular */
-}
+/* This code is creating the link on the top which looks like a button but is not one */
 
 .button-link {
     display: inline-block;
@@ -56,10 +60,14 @@ h2 {
     transition: background-color 0.3s; /* Add smooth transition on hover */
 }
 
+/* This code allows me to put effects when the user goes over the button */
 .button-link:hover {
     background-color: #0056b3; /* Change color on hover */
 }
 
+
+/* This code define my icon box. The emoji i was putting in my title had a black backround
+and we could not see it. Thats why ive decided to create a small whit box behind */
 .icon-box {
     background-color: #fff; /* Set the background color to white */
     padding: 5px; /* Adjust padding as needed */
@@ -67,22 +75,59 @@ h2 {
     margin-right: 10px; /* Add some space between the icon and text */
 }
 
+/* Ive decided to round a bit my image to make it prettier */
+.rounded-image {
+    border-radius: 10%; /* Makes the image circular */
+}
 
 
-
+/* This is regrouping all of my DIV and i can then apply to code on my whole code*/
 .container {
     width: 700px;
     margin: 24px auto;
 }
 
+
+/* The following three codes allow me to adjust my website to the user (for example using an iphone)*/
+
+/* Thats for a big iphone*/
 @media (max-width: 960px){
     .container {
         width: 500px;
     }
 }
 
+/* Thats a medium Iphone*/
 @media (max-width: 540px){
     .container {
         width: 400px;
     }
 }
+
+
+/* Thats for a small iphone*/
+@media (max-width: 320px){
+    .container {
+        width: 300px;
+    }
+}
+
+
+/* Those next lines will help me to make appear my picture from blurred to normal*/
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        filter: blur(10px); /* Start with a strong blur */
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0); /* Gradually remove the blur */
+    }
+}
+
+.rounded-image {
+    border-radius: 10%;
+    animation: fadein 4s; /* Longer animation duration */
+    display: none;
+    margin: 0 auto;

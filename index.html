@@ -1,88 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- First I define the structure of my HTML file -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- I give a Title to the internet Page to make it look prettier -->
     <title>My Profile</title>
+    
+    <!-- This line of code allows me to use Icons from the website fontawesome -->
     <script src="https://kit.fontawesome.com/501252d5cd.js" crossorigin="anonymous"></script>
+    
+    <!-- Link to your external CSS file -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    
+    <!-- Ive included a bit of Java Script in order to make appear my picture  -->
+    <script>
+        // Function to show the image after a delay
+        function showImage() {
+            var image = document.getElementById("profileImage");
+            image.style.display = "block"; // Display the image
+        }
+
+        // Call the function after 1 seconds 
+        setTimeout(showImage, 1000);
+    </script>
+
 </head>
+
 <body>
 
+    <!-- To have something a bit cleaner I've put everything in the DIV container -->
     <div Class= "container">
     
-  <!-- Introduction Section -->
-    <div class="title-box">
-    <h1 class="title">
-        <span class="icon-box">👤</span> My profile 🫕
-    </h1>
-    <a href="https://www.lewagon.com/"target="_blank" class="button-link">Visit Le Wagon</a>
-    </div>
+        <!-- First I have my introduction Section -->
+        <!-- I call my different function made in my CSS file -->
+        <div class="title-box">
+            <h1 class="title">
 
+                <!-- I give my first Title with my icons -->
+                <span class="icon-box">👤</span> My profile 🫕
+            </h1>
+            <a href="https://www.lewagon.com/" target="_blank" class="button-link">Visit Le Wagon</a>
+        </div>
 
-    
+        <!-- I put my Image and give it a size and call different CSS functions-->
+        <div class="image-box">
+            <img src="./images/profile_picture.jpg" alt="Profile Picture" width="200" class="rounded-image" id="profileImage"> 
+            <div class="textbox">
+                <p>
+                    <!-- I write my First paragraph with a few infos about me -->
+                    Name: Martin <br> Last Name: Ayer <br> Date of Birth: 30.11.1996
+                </p>
+            </div>
+        </div>
 
-    <Div class="image-box">
-        <img src="./images/profile_picture.jpg" alt="Profile Picture" width="200" class="rounded-image"> 
-        <div class="textbox">
+        <!-- Then I have my introduction Text -->
+        <div class="section-box">
+            <h2>Introduction 🎓</h2>
             <p>
-                Name: Martin <br> Last Name: Ayer <br> Date of Birth: 30.11.1996
+                I am a last-year student at the Ecole Hôtelière de Lausanne, finishing my Bachelor’s degree in February 2024. Traveling, participating in events, and serving in the army as a lieutenant has shifted my education to hospitality and business. I excel when working in teams to solve problems under pressure. 
+                Initially from Fribourg (Switzerland), I have always loved traveling and discovering different cultures to grow an international mindset. After the army, I knew I would study management and hospitality at EHL, the best place to study those subjects worldwide. My five-year plan includes graduating from EHL and starting my professional career as a manager.
             </p>
         </div>
 
+        <!-- Thirdly I have my hobbies section -->
+        <div class="section-box">
+            <h2>My Hobbies ⛳</h2>
+            <p>In my free time I like:<br> To play golf <br> See my friends <br> Travel <br> Increase my knowledge and find new activities
+            </p>
+        </div>
 
-    </div>
-
-
-
-    <!-- Introduction Text -->
-    <div class="section-box">
-        <h2>Introduction 🎓</h2>
-        <p>
-            I am a last-year student at the Ecole Hôtelière de Lausanne, finishing my Bachelor’s degree in February 2024. Traveling, participating in events, and serving in the army as a lieutenant has shifted my education to hospitality and business. I excel when working in teams to solve problems under pressure. 
-            Initially from Fribourg (Switzerland), I have always loved traveling and discovering different cultures to grow an international mindset. After the army, I knew I would study management and hospitality at EHL, the best place to study those subjects worldwide. My five-year plan includes graduating from EHL and starting my professional career as a manager.
-        </p>
-    </div>
-
-    <!-- My Hobby Section -->
-    <div class="section-box">
-        <h2>My Hobbies ⛳</h2>
-        <p>In my free time I like:<br> To play golf <br> See my friends <br> Travel <br> Increase my knowledge and find new activities
- </p>
-    </div>
-
-    <!-- Links Section -->
-    <div class="section-box">
-        <h2>Follow me!</h2>
-        
-        <ul class="social-icons">
-    <li>
-        <a href="https://www.linkedin.com/in/martin-ayer/" target="_blank">
-            <i class="fa-brands fa-linkedin icon-large"></i>
-        </a>
-    </li>
-    <li>
-        <a href="https://www.twitter.com/your-twitter-url/" target="_blank">
-            <i class="fa-brands fa-twitter icon-large"></i>
-        </a>
-    </li>
-    <li>
-        <a href="https://www.instagram.com/martinayer8/" target="_blank">
-            <i class="fa-brands fa-instagram icon-large"></i>
-        </a>
-    </li>
-</ul>
+        <!-- And finally the section where people can follow  me -->
+        <div class="section-box">
+            <h2>Follow me!</h2>
+            <ul class="social-icons">
+                <li>
+                    <a href="https://www.linkedin.com/in/martin-ayer/" target="_blank">
+                        <i class="fa-brands fa-linkedin icon-large"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com/your-twitter-url/" target="_blank">
+                        <i class="fa-brands fa-twitter icon-large"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/martinayer8/" target="_blank">
+                        <i class="fa-brands fa-instagram icon-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
     </div>
 
 </body>
 </html>
-
-
-
-    </div>
-
-  
